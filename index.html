@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Proyectcom Soluciones Integrales S.A.S</title>
+</head>
+<body>
+    <header class="header">
+        <nav>
+            <img src="imagenes/Captura de pantalla 2025-04-18 113742.png" alt="Proyectcom" class="imgProyectcom">
+            <div class="menu">
+                <ul>
+                    <li class="has-submenu">
+                        <img src="imagenes/llave-inglesa.png" alt="llave-inglesa">
+                        Clientes
+                        <ul class="submenu">
+                            <li>Clientes Nuevos</li>
+                            <li>Clientes Finalizados</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+<section id="mainContent" class="sectionMain">
+    <div class="contenedor">
+        <form class="form1">
+            <label>
+                <span>Buscar</span>
+                <input type="number" name="id" class="inputBus">
+            </label>
+            <button title="Agregar nuevo cliente" class="botonImgMas">
+                <img src="imagenes/mas.png" alt="Mas" class="imgMas">
+            </button>   
+        </form>
+              
+        <div class="contenedor-tabla">
+            <table class="tabla-clientes">
+                <thead>
+                    <tr class="card">
+                      <th>Fecha:</th>
+                      <th>Nombre:</th>
+                      <th>Empresa:</th>
+                      <th>Motivo:</th>
+                      <th>Ciudad:</th>
+                      <th>Celular:</th>
+                      <th>Número de cotización:</th>
+                      <th>Estado:</th>
+                      <th>Correo:</th>
+                    </tr>
+                  </thead>
+                  <tbody class="tarjetas-container">
+                  </tbody>
+              </table>              
+        </div>
+    </div>
+</section>
+
+    <section id="formTarjeta" class="form-tarjeta" style="display: none;">
+        <div class="tarjeta">
+            <form id="crearTarjeta" class="crearTarjeta">
+                <h3>Crear nuevo usuario</h3>
+                <input type="text" placeholder="Nombre" name="nombre" required>
+                <input type="text" placeholder="Empresa" name="empresa" required>
+                <div class="form-group">
+                    <label for="fecha">Fecha</label>
+                    <div class="input-group">
+                        <input type="date" id="fecha" name="fecha" class="form-control">
+                        <span class="input-group-addon">
+                            <i class="fas fa-calendar-alt"></i> <!-- Ícono del calendario -->
+                        </span>
+                    </div>
+                </div>
+                <input type="text" placeholder="Motivo" name="motivo">
+                <input type="text" placeholder="Ciudad" name="ciudad">
+                <input type="text" placeholder="Celular" name="celular">
+                <input type="text" placeholder="Correo" name="correo">
+                <input type="text" placeholder="Número de cotización" name="numCotizacion" required>
+                <button type="submit">Guardar</button>
+            </form>
+        </div>
+    </section>
+    
+    <section id="finalizadosContent" style="display: none;" class="sectionMain">
+        <form class="form1">
+            <label>
+                <span>Buscar</span>
+                <input type="number" name="id" class="inputBus">
+            </label>   
+        </form>
+        
+        <h3 style="margin-bottom: 20px;">Clientes Finalizados</h3>
+        <div class="contenedor-tabla">
+            <table class="tabla-clientes">
+                <thead class="THF">
+                    <tr class="card">
+                        <th>Fecha:</th>
+                        <th>Nombre:</th>
+                        <th>Empresa:</th>
+                        <th>Motivo:</th>
+                        <th>Ciudad:</th>
+                        <th>Celular:</th>
+                        <th>Correo:</th>
+                        <th>Número de cotización:</th>
+                        <th>Estado:</th>
+                    </tr>
+                </thead>
+                <tbody class="tarjetas-container" id="finalizadosContainer">
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <section id="editarSection" sty le="display: none;">
+        <form id="formEditar">
+          <input type="hidden" name="id" id="editarId">
+          <input type="text" name="fecha" id="editarFecha">
+          <input type="text" name="nombre" id="editarNombre">
+          <input type="text" name="empresa" id="editarEmpresa">
+          <input type="text" name="motivo" id="editarMotivo">
+          <input type="text" name="ciudad" id="editarCiudad">
+          <input type="text" name="celular" id="editarCelular">
+          <input type="email" name="correo" id="editarCorreo">
+          <input type="text" name="numCotizacion" id="editarNumCotizacion">
+        </form>
+      </section>
+    <script src="index.js/main.js" defer></script>
+</body>
+</html>

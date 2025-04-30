@@ -1,0 +1,493 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Lucida Sans', sans-serif;
+    border: none;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    background-color: #e4e4e4;
+}
+
+.header {
+    padding: 1vw 8vw;
+    background-color: #fff;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+}
+
+.imgProyectcom {
+    height: auto;
+    max-height: 60px;
+}
+
+.menu ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.menu li {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 16px;
+    background-color: #fff;
+    transition: 0.3s;
+    border-radius: 6px;
+    white-space: nowrap;
+}
+
+.menu li:hover {
+    background-color: #f0f0f0;
+}
+
+.menu li img {
+    width: 20px;
+    height: 20px;
+}
+
+.submenu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    border-radius: 4px;
+    padding: 10px 0;
+    min-width: 180px;
+    opacity: 0;
+    transform: translateY(10px);
+    pointer-events: none;
+    transition: all 0.3s ease;
+    z-index: 10;
+}
+
+.has-submenu:hover .submenu {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+}
+
+.submenu li {
+    padding: 8px 15px;
+    color: #333;
+    transition: 0.2s;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+.submenu li:hover {
+    background-color: #c0c0c0;
+}
+
+.sectionMain {
+    background-color: #fff;
+    margin: 7vh 2vw 2vw;
+    padding: 1vw;
+    border-radius: 20px;
+    transition: opacity 0.5s ease;
+}
+
+.form1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.botonImgMas {
+    background-color: #fff;
+    display: flex;
+    gap: 5px;
+    cursor: pointer;
+}
+
+
+.crearTarjeta {
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 1vw;
+    width: 40vw;
+    gap: 10px;
+}
+
+.form-tarjeta {
+    display: flex;
+    justify-content: center;
+    padding-top: 7vh;
+    width: 100%;
+    box-sizing: border-box;
+    animation: show-card 0.5s ease forwards;
+}
+
+.form-tarjeta input, .form-tarjeta textarea {
+    padding: 8px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.form-tarjeta button {
+    background-color: #4caf50;
+    color: white;
+    padding: 10px;
+    border-radius: 6px;
+    cursor: pointer;
+    width: 100%;
+}
+
+.form-tarjeta button:hover {
+    background-color: #3e8e41;
+}
+
+.buttons-container {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.eliminarBtn {
+    padding: 6px 12px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.editarBtn {
+    background-color: #2196f3;
+    color: #fff;
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-size: 14px;
+    margin-left: -30px; 
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.3s;
+}
+
+.editarBtn:hover {
+    background-color: #1976d2;
+}
+
+.guardarBtn{
+    margin-left: -50px;   
+}
+
+.imgMas {
+    padding: 2px;
+    width: 3vh;
+}
+
+.tarjetas-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.card {
+    display: flex;
+    align-items: center;
+    min-width: 1450px;
+    gap: 50px;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.card-body button {
+    align-self: flex-start;
+    margin-top: 0.5rem;
+    padding: 0.4rem 0.8rem;
+    border: none;
+    border-radius: 8px;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+}
+
+.contenedor-tabla {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow: scroll;
+    min-height: 400px;
+}
+
+.tabla-clientes {
+    width: 100%;
+    border-collapse: collapse;
+    min-height: 120px;
+    position: relative;
+}
+
+thead{
+    position: absolute;
+}
+
+tbody{
+    position: absolute;
+    top: 40px;
+}
+
+.celular{
+    margin-left: -30px;
+    margin-right: 30px;
+}
+
+.tarjeta{
+    display: flex;
+    justify-content: center;
+}
+
+.Correo{
+    margin-left: -80px;
+    margin-right: -40px;
+}
+
+.cardBodyEle{
+    margin-left: 70px;
+}
+
+.contenedor-estado{
+    margin-left: 45px;
+    margin-right: -45px;
+}
+
+.tabla-clientes th, .tabla-clientes td {
+    padding: 10px;
+    text-align: left;
+    border-radius: 10px;
+}
+
+.tabla-clientes tbody tr:nth-child(odd) {
+    background-color: #f2f2f2;
+}
+
+.tabla-clientes tbody tr:hover {
+    background-color: #e9ecef;
+    cursor: pointer;
+}
+
+
+#editarSection {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 7vh;
+    width: 100%;
+    box-sizing: border-box;
+    animation: show-card 0.5s ease forwards;
+}
+
+#editarSection .form-group {
+    margin-bottom: 15px;
+}
+
+#editarSection input, #editarSection textarea, #editarSection select {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+}
+
+#editarSection input:focus, #editarSection textarea:focus, #editarSection select:focus {
+    outline: none;
+    border-color: #66afe9;
+}
+
+#editarSection button {
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+#editarSection button:hover {
+    background-color: #0056b3;
+}
+
+.comentarios-container h5 {
+    margin-bottom: 5px;
+    font-size: 14px;
+    color: #444;
+}
+
+.botones-edicion{
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+.comentarios-box{
+    resize: vertical;
+    min-height: 50px;
+    max-height: 100px;
+}
+
+.guardarBtn2{
+    width: 180px;
+}
+
+.comentarios-card {
+    margin-top: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+}
+
+.comentarios-card .card-header {
+    font-size: 1.2em;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+}
+
+.comentarios-card .card-body {
+    padding-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 60px;
+}
+
+.mini-comentario {
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 10px;
+    padding-bottom: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.fecha-comentario {
+    font-size: 0.9em;
+    color: #000000;
+    margin-left: 1vw;
+    margin-right: 1vw;
+    margin-bottom: 5px;
+}
+
+.comentario-texto {
+    font-size: 1em;
+    color: #333;
+}
+
+#formEditar {
+    width: 100%;
+    max-width: 600px;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    background-color: #ffffff;
+    margin-top: 10px;
+}
+
+.input-group input[type="date"] {
+    padding-right: 30px;
+}
+
+.input-group input[type="date"]:focus + .input-group-addon {
+    color: #007bff;
+}
+
+.input-group-addon:hover {
+    color: #007bff;
+}
+
+.hide-section {
+    animation: fadeOut 0.3s forwards;
+    pointer-events: none;
+}
+
+.show-section {
+    animation: fadeInOut 0.3s forwards;
+}
+
+.show-card {
+    animation: show-card 0.5s ease forwards;
+}
+
+.hide-card {
+    animation: hide-card 0.5s ease forwards;
+}
+
+@keyframes fadeInOut {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+}
+
+@keyframes show-card {
+    from {
+        opacity: 0;
+        transform: translateY(100px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes hide-card {
+    from {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    to {
+        opacity: 0;
+        transform: translateY(100px);
+    }
+}
+
+@media (max-width: 800px) {
+    .imgProyectcom {
+        width: 180px;
+    }
+
+    .submenu {
+        left: -55px;
+    }
+
+    .listaUl, .card-body {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .crearTarjeta {
+        width: 90vw;
+    }
+
+    .form-tarjeta {
+        width: 100%;
+    }
+}
