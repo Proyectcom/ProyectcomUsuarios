@@ -173,6 +173,7 @@ nav {
     cursor: pointer;
     border: none;
     transition: background-color 0.3s;
+    margin-left: 1220px;
 }
 
 .editarBtn:hover {
@@ -199,7 +200,7 @@ nav {
 .card {
     display: flex;
     align-items: center;
-    min-width: 1450px;
+    min-width: 1600px;
     gap: 50px;
     border-radius: 10px;
     padding: 10px;
@@ -239,9 +240,12 @@ tbody{
     top: 40px;
 }
 
-.celular{
-    margin-left: -30px;
-    margin-right: 30px;
+tr{
+    position: relative;
+}
+
+td{
+    position: absolute;
 }
 
 .tarjeta{
@@ -249,18 +253,39 @@ tbody{
     justify-content: center;
 }
 
-.Correo{
-    margin-left: -80px;
-    margin-right: -40px;
+.celular{
+    left: 650px;
 }
 
-.cardBodyEle{
-    margin-left: 70px;
+.Correo{
+    left: 1170px;
+}
+
+.empresa{
+    left: 260px;
+    max-width: 110px;
+}
+
+.motivo{
+    left: 420px;
+    max-width: 110px;
+}
+
+.ciudad{
+    left: 530px;
+    max-width: 110px;
+}
+
+.motivo2{
+    left: 400px;
 }
 
 .contenedor-estado{
-    margin-left: 45px;
-    margin-right: -45px;
+    left: 1020px;
+}
+
+.info-id{
+    left: 850px;
 }
 
 .tabla-clientes th, .tabla-clientes td {

@@ -42,7 +42,7 @@ function crearTarjeta(data) {
             <td class="motivo">${data.motivo}</td>
             <td class="ciudad">${data.ciudad}</td>
             <td class="celular">${data.celular}</td>
-            <td class="info-idEle">${data.numCotizacion}</td>
+            <td class="info-idEle info-id">${data.numCotizacion}</td>
             <td class="contenedor-estado">
                 <select class="select-estado estado" data-id="${data.id}" style="color: ${estadoColor};">
                     <option ${data.estado == 1 ? 'selected' : ''} value="1">Abierto</option>
@@ -50,7 +50,7 @@ function crearTarjeta(data) {
                     <option ${data.estado == 3 ? 'selected' : ''} value="3">Finalizado</option>
                 </select>
             </td>
-            <td>${data.correo}</td>
+            <td class="Correo">${data.correo}</td>
 
             <button class="editarBtn">Editar</button>
             <button class="guardarBtn eliminarBtn" style="display: none;">Guardar</button>
@@ -318,15 +318,15 @@ function mostrarFinalizados() {
             <tr class="card-body">
                 <span >${data.fecha}</span>
                 <h4 class="h4">${data.nombre}</h4>
-                <td>${data.empresa}</td>
-                <td>${data.motivo}</¿>
-                <td>${data.ciudad}</td>
+                <td class="empresa">${data.empresa}</td>
+                <td class="motivo">${data.motivo}</td>
+                <td class="ciudad">${data.ciudad}</td>
                 <td class="celular">${data.celular}</td>
-                <td class="Correo">${data.correo}</th>
                 <td class="info-id">${data.numCotizacion}</td>
-                <td class="cardBodyEle" style="color: blue;">Finalizado</td>
+                <td class="cardBodyEle contenedor-estado" style="color: blue;">Finalizado</td>
+                <td class="Correo">${data.correo}</td>
 
-                <button class="eliminarBtn">Eliminar</button>
+                <button class="eliminarBtn editarBtn">Eliminar</button>
             </tr>
         `;
 
