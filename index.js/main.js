@@ -316,7 +316,7 @@ function mostrarFinalizados() {
 
         card.innerHTML = `
             <tr class="card-body">
-                <span >${data.fecha}</span>
+                <span>${data.fecha}</span>
                 <h4 class="h4">${data.nombre}</h4>
                 <td class="empresa">${data.empresa}</td>
                 <td class="motivo">${data.motivo}</td>

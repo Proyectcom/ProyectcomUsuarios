@@ -169,11 +169,11 @@ nav {
     padding: 6px 12px;
     border-radius: 6px;
     font-size: 14px;
-    margin-left: -30px; 
     cursor: pointer;
     border: none;
     transition: background-color 0.3s;
-    margin-left: 1220px;
+    position: absolute;
+    left: 1300px;
 }
 
 .editarBtn:hover {
@@ -181,7 +181,8 @@ nav {
 }
 
 .guardarBtn{
-    margin-left: -50px;   
+    position: absolute;
+    left: 1400px;  
 }
 
 .imgMas {
@@ -200,7 +201,7 @@ nav {
 .card {
     display: flex;
     align-items: center;
-    min-width: 1600px;
+    min-width: 1500px;
     gap: 50px;
     border-radius: 10px;
     padding: 10px;
@@ -253,12 +254,16 @@ td{
     justify-content: center;
 }
 
+h4{
+    white-space: nowrap;
+}
+
 .celular{
     left: 650px;
 }
 
 .Correo{
-    left: 1170px;
+    left: 1090px;
 }
 
 .empresa{
@@ -281,11 +286,11 @@ td{
 }
 
 .contenedor-estado{
-    left: 1020px;
+    left: 950px;
 }
 
 .info-id{
-    left: 850px;
+    left: 820px;
 }
 
 .tabla-clientes th, .tabla-clientes td {
